@@ -17,17 +17,37 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import chatScreen
 import com.chatbot.ui.theme.ChatBotTheme
+import com.chatbotlibrary.chatSupport.data.ui.ChatScreenSupport
+import com.chatbotlibrary.core.ChatBotConfig
+import com.chatbotlibrary.core.ChatBotSDK
+import com.chatbotlibrary.presentation.ChatBotScreen
+
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        ChatBotSDK.initialize(
+
+            apiKey =" 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",
+            baseUrl = "https://api.openai.com/",
+
+            config = ChatBotConfig(
+
+                primaryColor = Color.Blue,
+
+                botName = "Nitin AI"
+            )
+        )
+
+
         setContent {
             ChatBotTheme{
 
-            chatScreen()
+              //  ChatBotScreen()
+
+                ChatScreenSupport()
 
 
             }
