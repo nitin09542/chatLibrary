@@ -30,8 +30,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         ChatBotSDK.initialize(
 
-            apiKey =" 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",
-            baseUrl = "https://api.openai.com/",
+            apiKey = "",
+            baseUrl="",
 
             config = ChatBotConfig(
 
